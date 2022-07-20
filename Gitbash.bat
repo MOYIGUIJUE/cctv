@@ -1,10 +1,10 @@
 @echo off
 rem mode 70,15
 REM setlocal enabledelayedexpansion
-git init
-git remote add origin https://github.com/MOYIGUIJUE/cctv.git
-git remote -v
-git pull --rebase origin master
+REM git init
+REM git remote add origin https://github.com/MOYIGUIJUE/cctv.git
+REM git remote -v
+REM git pull --rebase origin master
 if "%~1"=="" (
 	git status
 	exit /b
@@ -12,8 +12,8 @@ if "%~1"=="" (
 REM git diff
 git add *
 git commit -m "%~1"
-git push
-REM git push origin master
+git push origin master
+REM git push -u origin master
 REM git pull --rebase origin master
 REM 合并分支
 REM git merge temp
