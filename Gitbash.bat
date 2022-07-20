@@ -11,10 +11,18 @@ if "%~1"=="" (
 )
 REM git diff
 git add *
-git commit -m "%~1"
+git commit -m %~1
 git push origin master
 REM git push -u origin master
 REM git pull --rebase origin master
+
+REM git reset --mixed
+REM git reset --soft
+REM git reset --hard
+
+REM git reflog
+
+git revert dd1fd23dd6ec6d8316409bc45ccb74259ddfa714
 REM 合并分支
 REM git merge temp
 
