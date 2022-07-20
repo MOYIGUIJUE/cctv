@@ -13,7 +13,7 @@ if "%~1"=="" (
 REM git diff
 git add .
 git commit -m %1
-git push origin main
+git push origin
 REM git push -u origin master
 REM git pull --rebase origin master
 
