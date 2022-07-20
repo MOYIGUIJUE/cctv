@@ -1,9 +1,10 @@
 @echo off
 rem mode 70,15
 REM setlocal enabledelayedexpansion
-REM git init
-REM git remote add origin https://gitee.com/cctv3058084277/main.git
-REM git remote -v
+git init
+git remote add origin https://github.com/MOYIGUIJUE/cctv.git
+git remote -v
+git pull --rebase origin master
 if "%~1"=="" (
 	git status
 	exit /b
