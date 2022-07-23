@@ -38,6 +38,7 @@ REM git push origin --delete Chapater6
 
 REM 删除本地分支 Chapater6
 REM git branch -d  Chapater6
+REM ssh-keygen
 exit /b
 
 
