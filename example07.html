@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>图片视差效果</title>
+  <style>
+    .wrapper {
+      height: 100vh;
+    }
+
+    .parallax-img1,
+    .parallax-img2,
+    .parallax-img3,
+    .parallax-img4 {
+      position: relative;
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .parallax-img1 {
+      height: 100%;
+      background-image: url("http://www.lixianglong.cn/bg_store/img/momentum/63fd2db8-9a45-44b6-8a98-3a693b0f15df.jpg");
+    }
+    .parallax-img2 {
+      min-height: 400px;
+      background-image: url("http://www.lixianglong.cn/bg_store/img/momentum/72d6e63c-71ee-4c92-9456-e8f04cca9409.jpg");
+    }
+    .parallax-img3 {
+      min-height: 600px;
+      background-image: url("https://github.com/MOYIGUIJUE/VCC/blob/master/image/1658592460727.png?raw=true");
+    }
+    .parallax-img4 {
+      height: 100%;
+      background-image: url("https://github.com/MOYIGUIJUE/VCC/blob/master/image/tcc.jpg?raw=true");
+    }
+
+    .caption {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 100%;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+    }
+
+    .caption > span {
+      background: rgb(32, 32, 32, 0.85);
+      color: #82fcfd;
+      padding: 18px 50px;
+      font-size: 30px;
+      border-radius: 16px;
+    }
+
+    .caption p {
+      margin: 0 0 15px 0;
+      padding: 0 0 15px 0;
+      border-bottom: 2px solid #82fcfd;
+    }
+
+    .caption > span p:first-of-type {
+      font-size: 40px;
+    }
+
+    /* 其他样式只为了更好看，不是必要的 */
+
+    body {
+      margin: 0;
+      background: #202020;
+    }
+
+    * {
+      font-family: Candara;
+      box-sizing: border-box;
+    }
+
+    h1 {
+      margin: 3rem 0 0 0;
+      text-align: center;
+      color: #fff;
+    }
+
+    .content {
+      width: 1200px;
+      margin: 0 auto;
+      color: #ddd;
+    }
+
+    p {
+      margin: 15px;
+      font-size: 1.1rem;
+      padding: 1.5rem 5rem;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+<div class="wrapper">
+  <div class="parallax-img1">
+    <div class="caption">
+          <span>
+            <img
+                    src="https://github.com/MOYIGUIJUE/VCC/blob/master/image/tcc.jpg?raw=true"
+                    alt=""
+                    height="80"
+                    width="80"
+            />
+            <p>向下滑动</p>
+            对你没有看错，这个效果只需要用到 CSS 就能轻易的实现！<br>
+            我们只要使用一个 CSS 背景图的属性background-attachment: fixed，这个特性会把背景相对于视口固定。<br>
+            即使一个元素拥有滚动机制，背景也不会随着元素的内容滚动。
+          </span>
+    </div>
+  </div>
+  <div class="content">
+    <h1>实现理论</h1>
+    <p>
+      一、在含有图片的元素中加入background: url()和background-size: cover（第二个属性适用于定义图片为封面，可以让图片大小自动适应，在很大的屏幕也会显示完整的图片）
+      <br>
+      二、然后附加固定背景图的属性background-attachment: fixed
+      <br>
+      三、最后给这个元素加入一个高度height: 100%或者任意的高度height: 400px
+    </p>
+  </div>
+  <div class="parallax-img2">
+    <div class="caption">
+      <span>不同的高度，不同的感觉</span>
+    </div>
+  </div>
+  <div class="content">
+    <p>
+      上下滑动能更好的体验视差效果是如何运作的。
+    </p>
+  </div>
+  <div class="parallax-img3">
+    <div class="caption"><span>感受一下视觉差，带来的冲击感</span></div>
+  </div>
+  <div class="content">
+    <p style="text-align: right;">混合视觉</p>
+  </div>
+  <div class="parallax-img4">
+    <div class="caption">
+      <span>感觉怎么样？不要太激动了。</span>
+    </div>
+  </div>
+</div>
+</body>
+</html>
+
+<!--实现理论：-->
+
+<!--一、在含有图片的元素中加入background: url()和background-size: cover（第二个属性适用于定义图片为封面，可以让图片大小自动适应，在很大的屏幕也会显示完整的图片）-->
+
+<!--二、然后附加固定背景图的属性background-attachment: fixed-->
+
+<!--三、最后给这个元素加入一个高度height: 100%或者任意的高度height: 400px-->
